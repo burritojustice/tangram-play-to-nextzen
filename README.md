@@ -1,13 +1,13 @@
 # tangram-play-to-nextzen
 
-This script downloads your Tangram Play files and updates mapzen.com URLs to nextzen.org.
+This Python 3 script downloads your Tangram Play files and updates mapzen.com URLs to nextzen.org.
 
 
 # get your metadata
 
-- log into Tangram Play (hurry!)
-- do you know your developer ID? (It's a number.) If not, open https://mapzen.com/api/developer.json (you need to be logged in)
-- download https://mapzen.com/api/scenes/YOUR_DEVELOPER_ID (that's your blob of json that points to all your YAML scene files). You should have a file that looks like `22.json` on your desktop.
+- log into Tangram Play (hurry! like, today, Feb 1)
+- Do you know your developer ID? (It's a number.) If not, open https://mapzen.com/api/developer.json after you log in.
+- Download https://mapzen.com/api/scenes/YOUR_DEVELOPER_ID (that's your blob of json that points to all your YAML scene files). You should have a file that looks like `22.json` on your desktop.
 
 # install dependencies
 
