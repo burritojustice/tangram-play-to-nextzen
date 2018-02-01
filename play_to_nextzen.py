@@ -4,6 +4,10 @@ import os
 import re
 import json
 import requests
+
+import sys
+playjson = sys.argv[-1]
+
 # import yaml
 # import ruamel.yaml as yaml
 # yaml = YAML()
@@ -53,7 +57,8 @@ def parse_files(file):
 #     print(scene["sources"]["url"])
  
             
-data = json.load(open('22.json'))  
+# data = json.load(open('22.json'))  
+data = json.load(open(playjson))  
 for i in data:
     id = i['id']
     url = i['entrypoint_url']
