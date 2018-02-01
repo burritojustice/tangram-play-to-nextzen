@@ -13,6 +13,12 @@ This script downloads your Tangram Play files and updates mapzen.com URLs to nex
 
 - change line 56 to your developer ID `data = json.load(open('YOUR_DEVELOPER_ID.json'))`
 
+# install dependencies
+
+You may need to install the `requests` module:
+
+`pip3 install requests`
+
 # run the script
 
 `python3 play_to_nextzen.py`
