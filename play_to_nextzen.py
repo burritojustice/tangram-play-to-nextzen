@@ -32,7 +32,7 @@ def parse_files(file):
     match_mz = "tile.mapzen.com/mapzen"
     update_mz = "tile.nextzen.org/tilezen"
     match_carto = "mapzen.com/carto"
-    update_carto = "tilezen.org/carto"
+    update_carto = "www.nextzen.org/carto"
 #     print("looking in " + file)
 #     play = open(file, "r")
 #     for line in file:
