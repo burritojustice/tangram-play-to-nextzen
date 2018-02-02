@@ -1,13 +1,13 @@
 # tangram-play-to-nextzen
 
-This Python 3 script downloads your Tangram Play files and updates mapzen.com URLs to nextzen.org.
+This Python 3 script downloads scene files from your [Tangram Play](https://mapzen.com/tangram/play/) account and updates their soon-to-expire mapzen.com tile and style URLs to nextzen.org.
 
 
 # get your metadata
 
-- log into Tangram Play (hurry! like, today, Feb 1)
+- log into Tangram Play (hurry! like, today)
 - Do you know your developer ID? (It's a number.) If not, open https://mapzen.com/api/developer.json after you log in.
-- Download https://mapzen.com/api/scenes/YOUR_DEVELOPER_ID (that's your blob of json that points to all your YAML scene files). You should have a file that looks like `22.json` on your desktop.
+- Download https://mapzen.com/api/scenes/[YOUR_USER_ID] (that's your blob of json that points to all your YAML scene files). You should have a file that looks like `22.json` on your desktop.
 
 # install dependencies
 
@@ -17,7 +17,7 @@ You may need to install the `requests` module:
 
 # run the script
 
-`python3 play_to_nextzen.py YOUR_USER_ID.json`
+`python3 play_to_nextzen.py [YOUR_USER_ID].json`
 
 It will download all your scene files from mapzen.com, replace tile.mapzen.com and mapzen.com/carto URLs with their nextzen.org equivalents, and save them to disk with the scene file number and a meaningful name (if you added one in the description field).
 
