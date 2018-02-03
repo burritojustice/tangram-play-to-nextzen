@@ -31,8 +31,12 @@ def parse_files(file):
 
     match_mz = "tile.mapzen.com/mapzen"
     update_mz = "tile.nextzen.org/tilezen"
+    
+    match_vector = 'vector.mapzen.com/osm'
+
     match_carto = "mapzen.com/carto"
     update_carto = "www.nextzen.org/carto"
+    
 #     print("looking in " + file)
 #     play = open(file, "r")
 #     for line in file:
@@ -43,12 +47,18 @@ def parse_files(file):
     print(file.count("mapzen.com"))
     
     if re.search(match_mz, file):
-        print("swapping " + update_mz) 
+        print("found " + match_mz + ", swapping " + update_mz) 
     nextzen = file.replace(match_mz, update_mz)  
+    
+    if re.search(match_vector, file):
+        print("found " + match_vector + ", swapping " + update_mz) 
+    nextzen = file.replace(match_mz, update_mz) 
 
     if re.search(match_carto, file):
-        print("swapping " + update_carto)        
+        print("found " + match_carto + ", swapping " + update_carto)        
     nextzen = nextzen.replace(match_carto, update_carto)  
+    
+    
     
 #     print(nextzen) 
     return nextzen  
@@ -66,10 +76,11 @@ for i in data:
     lng = i['view_lng']
     zoom = i['view_zoom']
     name = i['name'].replace("/", "-")
+    name = name.replace(" ", "-")
     print(name,lat,lng,zoom,url) 
     r = requests.get(url)
     print(r)
-    filename = "{} {}.yaml".format(id,name)
+    filename = "{}-{}.yaml".format(id,name)
     print(filename)
     nextzen = parse_files(r.text)
 #     print(nextzen)
