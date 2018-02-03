@@ -23,8 +23,11 @@ It will download all your scene files from mapzen.com, replace tile.mapzen.com a
 
 # TO DO
 
-- done! ~try to use `fileinput` to read the json filename as a command line argument~   
 - doesn't do anything with API keys (stay tuned to nextzen.org for that)
-- doesn't yet look for old-style `vector.mapzen.com/osm` URLs
 - save static geojson files locally?
+- worth parsing the YAML to better handle API keys?
 - IANAD so sorry the code is ugly
+
+- *done!* ~try to use `fileinput` to read the json filename as a command line argument~  
+- *done!* ~doesn't yet look for old-style `vector.mapzen.com/osm` URLs~
+
